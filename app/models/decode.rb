@@ -1,0 +1,8 @@
+class Decode < ApplicationRecord
+
+
+
+
+
+
+end

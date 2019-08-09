@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+     <title>Encrypt!</title>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="team" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+</head>
+
+
+<body>
+
+     <!-- PRE LOADER -->
+<!--      <section class="preloader">
+          <div class="spinner">
+               <span class="spinner-rotate"></span>
+               
+          </div>
+     </section>
+ -->     
+
+     <!-- GRID LINE -->
+    <section class="grid">
+         <div class="container">
+            <div class="row">
+              <div class="col-md-2 col-sm-2">
+                <div class="grid-line"></div>
+              </div>
+              <div class="col-md-2 col-sm-2">
+                <div class="grid-line"></div>
+              </div>
+              <div class="col-md-2 col-sm-2">
+                <div class="grid-line"></div>
+              </div>
+              <div class="col-md-2 col-sm-2">
+                <div class="grid-line"></div>
+              </div>
+              <div class="col-md-2 col-sm-2">
+                <div class="grid-line"></div>
+              </div>
+            </div>
+         </div>
+    </section>
+
+     <!-- HOME -->
+     <section id="home">
+        <div class="overlay"></div>
+          <div class="container">
+               <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                         <div class="home-info">
+                             <h1 class = "big_title"><b >ENCRYP</b> <b id = "big_t">t</b> <b>0RR</b></h1>
+                             <h2><a href="/encodes" id = "encyr"> Encrypt </a> <a href="/decodes" id = "dncyr">Decrypt</a></h2>
+                              <h1 class = "big_top">Decrypt your message below!</h1>
+                              <%= form_with url: '/decrypt', remote: true, method: :post do %>
+                                 <%= text_area_tag "enc_message" %>
+                                 <h1 class = "big_top">Input key here</h1>
+                                 <%= text_area_tag "enc_key" %>
+                                <%= submit_tag 'Decrypt', id: 'decrypt' %>
+                                <% end %>
+                               <!--enocde-->
+                               <h1>Here's your decrypted message:</h1>
+                               <textarea id="decrypt-msg"></textarea>
+                         </div>
+                         <p id = "sign">@Jack Mazac</p>
+                    </div>
+               </div>
+          </div>
+
+     </section>
+
+
+</body>
+</html>

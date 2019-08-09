@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Plain message:</strong>
+  <%= @encode.plain_message %>
+</p>
+
+<p>
+  <strong>Generated key:</strong>
+  <%= @encode.generated_key %>
+</p>
+
+<%= link_to 'Edit', edit_encode_path(@encode) %> |
+<%= link_to 'Back', encodes_path %>

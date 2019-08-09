@@ -1,0 +1,27 @@
+<%= form_with(model: decode, local: true) do |form| %>
+  <% if decode.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(decode.errors.count, "error") %> prohibited this decode from being saved:</h2>
+
+      <ul>
+        <% decode.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :inputed_encode %>
+    <%= form.text_field :inputed_encode %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inputed_key %>
+    <%= form.text_field :inputed_key %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
